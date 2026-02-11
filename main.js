@@ -100,5 +100,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* Signature: Spiderweb Code 🕸️
-   "El diseño es el embajador silencioso de tu marca."
+   "El diseño es el embajador silencioso de la marca."
 */
