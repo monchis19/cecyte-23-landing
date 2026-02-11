@@ -1,0 +1,123 @@
+/* Signature: Spiderweb Code
+   Project: CECyTE 23 Texcalac 2026
+*/
+
+:root {
+    --neon-green: #4ade80;
+    --neon-orange: #f97316;
+    --bg-black: #050505;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* Base */
+body {
+    background-color: var(--bg-black);
+    color: #e2e8f0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar Personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-green);
+}
+
+/* Efecto Glassmorphism */
+.glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass:hover {
+    border-color: rgba(74, 222, 128, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Animaciones de Entrada */
+.card-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tipografía y Brillo */
+h1, h2, h3 {
+    letter-spacing: -0.02em;
+}
+
+.text-glow-green {
+    text-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
+}
+
+.text-glow-orange {
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+}
+
+/* Botones con estilo Tech */
+.btn-primary {
+    background: var(--neon-green);
+    color: black;
+    font-weight: 700;
+    padding: 12px 32px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(74, 222, 128, 0.5);
+    transform: scale(1.05);
+}
+
+/* Firma Spiderweb */
+.spiderweb-signature {
+    font-family: 'Fira Code', monospace;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: rgba(74, 222, 128, 0.15);
+    font-size: 10px;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Decoración de fondo */
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(74, 222, 128, 0.05) 0%, transparent 70%);
+    z-index: -1;
+    filter: blur(60px);
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem !important; }
+    .glass { padding: 1.5rem !important; }
+}
